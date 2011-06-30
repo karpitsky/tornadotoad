@@ -7,6 +7,14 @@ inside a tornadoapp.  It can be used outside of a running tornado app, but havin
 tornado installed is one of the requirements.  If there is an ioloop running, the
 request will be asynchronous.
 
+
+Installation:
+------------------
+You can use pip to install:
+
+  pip install tornadotoad
+
+
 Basic Usage:
 ------------------
 
