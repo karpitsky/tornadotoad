@@ -44,3 +44,6 @@ you have registered.
     client = tornadotoad.api.TornadoToad()
     client.deploy()
 
+Alternate Hoptoad servers can be specified with the `host` option to register, for example:
+
+    tornadotoad.register(api_key='your-api-key', environment='production', host='alternate-hoptoad-host.example.com')
