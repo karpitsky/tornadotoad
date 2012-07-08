@@ -3,7 +3,7 @@ from tornadotoad import mixin
 from tornadotoad import api
 
 def register(api_key=None, environment="production", log_403=False,
-             log_404=False, log_405=False, use_ssl=False):
+             log_404=False, log_405=False, use_ssl=False, host="hoptoadapp.com"):
     """Register a Hoptoad API key along with other run-time options.
     
     Needs to be called early, usually when creating Tornado Application. 
@@ -15,3 +15,4 @@ def register(api_key=None, environment="production", log_403=False,
     my.log_404 = log_404
     my.log_405 = log_405
     my.use_ssl = use_ssl
+    my.host = host

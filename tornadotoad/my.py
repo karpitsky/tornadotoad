@@ -5,3 +5,4 @@ log_404 = False
 log_403 = False
 log_405 = False
 use_ssl = False
+host = None

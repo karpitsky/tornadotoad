@@ -23,7 +23,7 @@ class TornadoToad(object):
         """
         if not my.registered:
             return False
-        url = self.ssl_prefix() + "hoptoadapp.com/notifier_api/v2/notices"
+        url = self.ssl_prefix() + my.host + "/notifier_api/v2/notices"
         body = self._build_notice_body(exception, request=request)
         self._send(url, body=body, headers={'Content-Type': 'text/xml'})
 
@@ -50,7 +50,7 @@ class TornadoToad(object):
             params['deploy[scm_revision]'] = scm_revision
         if local_username:
             params['deploy[local_username]'] = local_username
-        url = self.ssl_prefix() + "hoptoadapp.com/deploys.txt"
+        url = self.ssl_prefix() + my.host + "/deploys.txt"
         self._send(url, body=urllib.urlencode(params))
         
     
