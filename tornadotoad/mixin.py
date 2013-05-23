@@ -64,7 +64,7 @@ def catcher(original, *args, **kwargs):
     def wrapped_in_exceptions(*args, **kwargs):
         try:
             original(*args, **kwargs)
-        except Exception, e:
+        except Exception as e:
             tornado_toad = api.TornadoToad()
             tornado_toad.post_notice(e)
     wrapped_in_exceptions.__name__ = original.__name__
